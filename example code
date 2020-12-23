@@ -1,0 +1,186 @@
+# -*- coding:utf-8 -*-
+import csv
+class dealwithsheet():
+    # path2: the path of csv file which contains the names to be distinguish 
+    with open(path1) as f1: 
+        reader = csv.DictReader(f1)
+        first_name = [row['firstname'] for row in reader]
+    # path2: the path of the csv file of 406 syllables for the compositions of Chinese first name 
+    with open('path2') as f2, open('C:\\Users\\Qingnan Xie\\Desktop\\python code\\' + 'first_name_' + 'USO.csv', 'w',newline='', encoding='utf-8')as wf: 
+        reader2 = csv.DictReader(f2)
+        syllable = [row['syllable'] for row in reader3]
+        writer = csv.writer(wf)
+        writer.writerows(zip(['first_name'], ['Chinese_first_name']))
+        a_list = []
+        b_list = []
+        c_list = []
+        d_list = []
+        e_list = []
+        f_list = []
+        g_list = []
+        h_list = []
+        j_list = []
+        k_list = []
+        l_list = []
+        m_list = []
+        n_list = []
+        o_list = []
+        p_list = []
+        q_list = []
+        r_list = []
+        s_list = []
+        t_list = []
+        w_list = []
+        x_list = []
+        y_list = []
+        z_list = []
+        for s in syllable:
+            if s[0:1] == 'a':
+                a_list.append(s)
+                for ss in syllable:
+                    a_plus = s + ss
+                    a_list.append(a_plus)
+            if s[0:1] == 'b':
+                b_list.append(s)
+                for ss in syllable:
+                    b_plus = s + ss
+                    b_list.append(b_plus)
+            if s[0:1] == 'c':
+                c_list.append(s)
+                for ss in syllable:
+                    c_plus = s + ss
+                    c_list.append(c_plus)
+            if s[0:1] == 'd':
+                d_list.append(s)
+                for ss in syllable:
+                    d_plus = s + ss
+                    d_list.append(d_plus)
+            if s[0:1] == 'e':
+                e_list.append(s)
+                for ss in syllable:
+                    e_plus = s + ss
+                    e_list.append(e_plus)
+            if s[0:1] == 'f':
+                f_list.append(s)
+                for ss in syllable:
+                    f_plus = s + ss
+                    f_list.append(f_plus)
+            if s[0:1] == 'g':
+                g_list.append(s)
+                for ss in syllable:
+                    g_plus = s + ss
+                    g_list.append(g_plus)
+            if s[0:1] == 'h':
+                h_list.append(s)
+                for ss in syllable:
+                    h_plus = s + ss
+                    h_list.append(h_plus)
+            if s[0:1] == 'j':
+                j_list.append(s)
+                for ss in syllable:
+                    j_plus = s + ss
+                    j_list.append(j_plus)
+            if s[0:1] == 'k':
+                k_list.append(s)
+                for ss in syllable:
+                    k_plus = s + ss
+                    k_list.append(k_plus)
+            if s[0:1] == 'l':
+                l_list.append(s)
+                for ss in syllable:
+                    l_plus = s + ss
+                    l_list.append(l_plus)
+            if s[0:1] == 'm':
+                m_list.append(s)
+                for ss in syllable:
+                    m_plus = s + ss
+                    m_list.append(m_plus)
+            if s[0:1] == 'n':
+                n_list.append(s)
+                for ss in syllable:
+                    n_plus = s + ss
+                    n_list.append(n_plus)
+            if s[0:1] == 'o':
+                o_list.append(s)
+                for ss in syllable:
+                    o_plus = s + ss
+                    o_list.append(o_plus)
+            if s[0:1] == 'p':
+                p_list.append(s)
+                for ss in syllable:
+                    p_plus = s + ss
+                    p_list.append(p_plus)
+            if s[0:1] == 'q':
+                q_list.append(s)
+                for ss in syllable:
+                    q_plus = s + ss
+                    q_list.append(q_plus)
+            if s[0:1] == 'r':
+                r_list.append(s)
+                for ss in syllable:
+                    r_plus = s + ss
+                    r_list.append(r_plus)
+            if s[0:1] == 's':
+                s_list.append(s)
+                for ss in syllable:
+                    s_plus = s + ss
+                    s_list.append(s_plus)
+            if s[0:1] == 't':
+                t_list.append(s)
+                for ss in syllable:
+                    t_plus = s + ss
+                    t_list.append(t_plus)
+            if s[0:1] == 'w':
+                w_list.append(s)
+                for ss in syllable:
+                    w_plus = s + ss
+                    w_list.append(w_plus)
+            if s[0:1] == 'x':
+                x_list.append(s)
+                for ss in syllable:
+                    x_plus = s + ss
+                    x_list.append(x_plus)
+            if s[0:1] == 'y':
+                y_list.append(s)
+                for ss in syllable:
+                    y_plus = s + ss
+                    y_list.append(y_plus)
+            if s[0:1] == 'z':
+                z_list.append(s)
+                for ss in syllable:
+                    z_plus = s + ss
+                    z_list.append(z_plus)
+        name_list ={'a': a_list,
+                    'b': b_list,
+                    'c': c_list,
+                    'd': d_list,
+                    'e': e_list,
+                    'f': f_list,
+                    'g': g_list,
+                    'h': h_list,
+                    'j': j_list,
+                    'k': k_list,
+                    'l': l_list,
+                    'm': m_list,
+                    'n': n_list,
+                    'o': o_list,
+                    'p': p_list,
+                    'q': q_list,
+                    'r': r_list,
+                    's': s_list,
+                    't': t_list,
+                    'w': w_list,
+                    'x': x_list,
+                    'y': y_list,
+                    'z': z_list}
+        for i in range(len(first_name)):
+            f_name = first_name[i]
+            initial = f_name[0:1].lower()
+            c_name = 0
+            if name_list.get(initial):
+                for n in name_list.get(initial):
+                    if first_name[i].lower() == n:
+                        c_name = 1
+                        break
+            writer = csv.writer(wf)
+            writer.writerows(zip([first_name[i]], [c_name]))
