@@ -5,4 +5,4 @@
 4. add possible substitudes for the letter "ü": "v" or "u"
 5. 406 syllables are included for the permutation of possible pinyin forms of Chinese first name
 6. The example code include permutations of possible Chinese first name with 1 or 2 syllables, which covers the names used by more than 98% of populations in mainland China (see https://www.mps.gov.cn/n2254314/n6409334/c6874817/content.html)
-7. if you want to add  the permutation of possible pinyin forms of Chinese first name with 3 or more syllables, you just need add another loops
+7. To get the permutation of possible pinyin forms of Chinese first name with 3 syllables, just add another loop to the example code
