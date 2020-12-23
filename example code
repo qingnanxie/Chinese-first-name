@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 import csv
 class dealwithsheet():
-    # path2: the path of csv file which contains the names to be distinguish 
+    # path2: the path of csv file which contains the names to tested for whether they are possible mainland Chinese names or not   
     with open(path1) as f1: 
         reader = csv.DictReader(f1)
         first_name = [row['firstname'] for row in reader]
