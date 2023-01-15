@@ -1,14 +1,14 @@
 # -*- coding:utf-8 -*-
 import csv
 class dealwithsheet():
-    # path2: the path of csv file which contains the names to tested for whether they are possible mainland Chinese names or not   
+    # path1: the path of csv file of the name list  
     with open(path1) as f1: 
         reader = csv.DictReader(f1)
         first_name = [row['firstname'] for row in reader]
-    # path2: the path of the csv file of 406 syllables for the compositions of Chinese first name 
-    with open('path2') as f2, open('C:\\Users\\Qingnan Xie\\Desktop\\python code\\' + 'first_name_' + 'file_name.csv', 'w',newline='', encoding='utf-8')as wf: 
+    # path2: the path of the csv file of 406 syllables for the compositions of Mainland Chinese first name 
+    with open('path2') as f2, open('result_file.csv', 'w',newline='', encoding='utf-8')as wf: 
         reader2 = csv.DictReader(f2)
-        syllable = [row['syllable'] for row in reader3]
+        syllable = [row['syllable'] for row in reader2]
         writer = csv.writer(wf)
         writer.writerows(zip(['first_name'], ['Chinese_first_name']))
         a_list = []
