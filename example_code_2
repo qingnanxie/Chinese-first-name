@@ -1,0 +1,21 @@
+# -*- coding:utf-8 -*-
+import csv
+class dealwithsheet():
+    # path1: the path of csv file which contains the names to tested for whether they are possible mainland Chinese names or not   
+    with open(path1) as f1: 
+        reader = csv.DictReader(f1)
+        first_name = [row['firstname'] for row in reader]
+    # path2: the path of the csv file of 406 syllables for the compositions of Chinese first name 
+    with open('path2') as f2, open('result_file.csv', 'w',newline='', encoding='utf-8')as wf: 
+        reader2 = csv.DictReader(f2)
+        syllable = [row['syllable'] for row in reader2]
+        writer = csv.writer(wf)
+        writer.writerows(zip(['first_name'], ['Chinese_first_name']))
+        namelist = syllable+[str(i[0]) + str(i[1]) for i in itertools.product(syllable,repeat=2)]
+        #3 syllables: namelist = syllable+[str(i[0]) + str(i[1]) for i in itertools.product(syllable,repeat=2)] + [str(i[0]) + str(i[1]) + str(i[2]) for i in itertools.product(syllable,repeat=3)]
+        for i in range(len(first_name)):
+            c_name = 0
+            if first_name[i].lower() in namelist:
+                c_name = 1
+            writer = csv.writer(wf)
+            writer.writerows(zip(, [first_name[i]], [c_name]))
